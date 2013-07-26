@@ -1,9 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
-	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
-	<classpathentry kind="output" path="bin/classes"/>
+<?xml version="1.0" encoding="UTF-8"?><classpath>
+<classpathentry kind="src" path="src"/>
+<classpathentry kind="src" path="gen"/>
+<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+<classpathentry kind="output" path="bin/classes"/>
+<classpathentry kind="lib" path="/storage/sdcard0/AppProjects/AndroidChat/libs/android-support-v4.jar"/>
+<classpathentry kind="lib" path="/storage/sdcard0/AppProjects/AndroidChat/libs/firebase-client-jvm-1.0.2.jar"/>
+<classpathentry kind="lib" path="/storage/sdcard0/extract/scringo-android-2.2.3/scringo-android-2.2.3/libs/android-support-v4.jar"/>
+<classpathentry kind="lib" path="/storage/sdcard0/extract/scringo-android-2.2.3/scringo-android-2.2.3/libs/gcm.jar"/>
+<classpathentry kind="lib" path="/storage/sdcard0/extract/scringo-android-2.2.3/scringo-android-2.2.3/libs/scringo.jar"/>
+<classpathentry kind="lib" path="/storage/sdcard0/extract/scringo-android-2.2.3/scringo-android-2.2.3/libs/twitter4j-core-3.0.3.jar"/>
 </classpath>
