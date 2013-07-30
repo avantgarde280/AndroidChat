@@ -1,27 +1,14 @@
 package com.firebase.androidchat;
 
-import android.app.ListActivity;
-import android.content.SharedPreferences;
-import android.database.DataSetObserver;
-import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.inputmethod.EditorInfo;
+import android.app.*;
+import android.content.*;
+import android.database.*;
+import android.os.*;
+import android.view.*;
+import android.view.inputmethod.*;
 import android.widget.*;
-import com.firebase.client.DataSnapshot;
-import com.firebase.client.Firebase;
-import com.firebase.client.ValueEventListener;
-
-import com.scringo.Scringo;
-import com.scringo.Scringo.ScringoIcon;
-import com.scringo.ScringoActivationButton;
-import com.scringo.ScringoEventHandler;
-import com.scringo.ScringoLikeButton;
-import com.scringo.ScringoLikeButton.ScringoLikeObjectType;
-import com.scringo.utils.ScringoLogger.ScringoLogLevel;
-
-
-import java.util.Random;
+import com.firebase.client.*;
+import java.util.*;
 
 public class MainActivity extends ListActivity {
 
@@ -32,18 +19,18 @@ public class MainActivity extends ListActivity {
     private Firebase ref;
     private ValueEventListener connectedListener;
     private ChatListAdapter chatListAdapter;
-	private Scringo scringo = new Scringo(this);
+	// private Scringo scringo = new Scringo(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); 
-		scringo.setLogLevel(ScringoLogLevel.SCRINGO_LOG_LEVEL_DEBUG);
-		Scringo.setDebugMode(true);
-		scringo.setIcon(ScringoIcon.PERSON);
-		scringo.init();
+		// scringo.setLogLevel(ScringoLogLevel.SCRINGO_LOG_LEVEL_DEBUG);
+		// Scringo.setDebugMode(true);
+		// scringo.setIcon(ScringoIcon.PERSON);
+		// scringo.init();
 
-		((ScringoActivationButton) findViewById(R.id.activationButton)).setScringo(scringo);
+		// ((ScringoActivationButton) findViewById(R.id.activationButton)).setScringo(scringo);
 		
 
         // Make sure we have a username
@@ -73,18 +60,18 @@ public class MainActivity extends ListActivity {
             }
         });
 
-    } 
-	@Override
-	public void onBackPressed() {
-		if (!scringo.onBackPressed()) {
-			super.onBackPressed();
-		}
+    // } 
+	// @Override
+	// public void onBackPressed() {
+	//	if (!scringo.onBackPressed()) {
+	//		super.onBackPressed();
+	//	}
 	} 
 
     @Override
     public void onStart() {
         super.onStart(); 
-		scringo.onStart(); 
+		// scringo.onStart(); 
         // Setup our view and list adapter. Ensure it scrolls to the bottom as data changes
         final ListView listView = getListView();
         // Tell our list adapter that we only want 50 messages at a time
@@ -120,7 +107,7 @@ public class MainActivity extends ListActivity {
     @Override
     public void onStop() {
         super.onStop(); 
-		scringo.onStop(); 
+		// scringo.onStop(); 
         ref.getRoot().child(".info/connected").removeEventListener(connectedListener);
         chatListAdapter.cleanup();
     }
